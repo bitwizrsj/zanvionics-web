@@ -86,7 +86,7 @@ export default function ContactSection() {
                 type="submit"
                 className="w-full bg-[#00B4A8] hover:bg-[#007399] text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-300"
               >
-                Send Message
+                Book a Free 30-Min Consultation
               </button>
             </form>
           </motion.div>

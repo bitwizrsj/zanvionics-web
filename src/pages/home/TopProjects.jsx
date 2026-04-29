@@ -23,35 +23,20 @@ const useInView = (threshold = 0.1) => {
 };
 
 const projects = [
-  
   {
-    title: "Web Development",
-    description: "High-performance web applications built with cutting-edge technologies and optimized for speed and scalability.",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop",
-    tags: ["Web Development", "UX Research"],
+    title: "Built automation dashboard",
+    description: "Saved 15+ hours/week by automating repetitive patient data entry and administrative reporting workflows.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
+    tags: ["Automation", "Healthcare", "Dashboards"],
     category: "Development"
   },
   {
-    title: "Mobile App Development",
-    description: "Native and cross-platform mobile applications designed for seamless user experiences on iOS and Android.",
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=300&fit=crop",
-    tags: ["Mobile Dev", "React Native"],
-    category: "Development"
-  },
-  {
-    title: "E-commerce Solutions",
-    description: "Complete online store platforms with payment integration, inventory management, and analytics dashboard.",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop",
-    tags: ["E-commerce", "Full Stack"],
-    category: "Development"
-  },
-  {
-    title: "E-commerce Solutions",
-    description: "Complete online store platforms with payment integration, inventory management, and analytics dashboard.",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop",
-    tags: ["E-commerce", "Full Stack"],
-    category: "Development"
-  },
+    title: "Developed website for startup",
+    description: "Built a fully responsive, modern website optimized for conversions, resulting in a 2x increase in qualified leads.",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
+    tags: ["Web Design", "Web Development", "Startup"],
+    category: "Design"
+  }
 ];
 
 const ProjectCard = ({ project, index }) => {
@@ -166,7 +151,7 @@ export default function ProjectsSection() {
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-teal-600/20 to-blue-600/20 backdrop-blur-sm border border-teal-500/30 rounded-full px-6 py-3 mb-8">
             <div className="w-2 h-2 bg-teal-400 rounded-full animate-pulse" />
-            <span className="text-teal-300 text-sm font-medium">Featured Projects</span>
+            <span className="text-teal-300 text-sm font-medium">Case Studies</span>
             <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" />
           </div>
           
@@ -177,7 +162,7 @@ export default function ProjectsSection() {
           </h2> */}
           
           <p className="text-gray-400 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-8">
-            Discover our most impactful solutions that have transformed businesses and delighted users worldwide
+            Discover real-world examples of how we've helped UK businesses scale and automate operations.
           </p>
 
           {/* Filter buttons */}
@@ -194,7 +179,7 @@ export default function ProjectsSection() {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {filteredProjects.map((project, index) => (
             <ProjectCard key={`${activeFilter}-${index}`} project={project} index={index} />
           ))}

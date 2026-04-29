@@ -102,40 +102,22 @@ export default function ServicesSection() {
 
   const services = [
     {
-      icon: "🌐",
-      title: "Website Development",
-      description: "High-performance web platforms built with modern frameworks. From landing pages to full-stack applications, we create scalable solutions.",
-      features: ["Next.js", "React", "Tailwind CSS", "SEO Optimized", "Mobile First"]
+      icon: "⚡",
+      title: "Automation",
+      description: "Streamline your workflows with custom automation tools, API integrations, and process optimization solutions tailored for UK businesses.",
+      features: ["Workflow Automation", "API Integration", "Process Optimization", "Efficiency"]
     },
     {
       icon: "🤖",
-      title: "AI Integration",
+      title: "Data / AI",
       description: "Intelligent automation solutions that handle repetitive tasks, analyze data, and enhance user experiences with cutting-edge AI.",
-      features: ["OpenAI API", "Automation", "Data Analysis", "Custom Models", "Chatbots"]
+      features: ["OpenAI API", "Data Analysis", "Custom Models", "Business Intelligence"]
     },
     {
-      icon: "📱",
-      title: "Mobile Apps",
-      description: "Beautiful, performant mobile applications for iOS and Android using cross-platform technologies and native capabilities.",
-      features: ["React Native", "Flutter", "Native iOS", "Android", "Cross-platform"]
-    },
-    {
-      icon: "🚀",
-      title: "Performance Optimization",
-      description: "Boost your digital presence with technical SEO, speed optimization, and conversion rate improvements that drive results.",
-      features: ["Core Web Vitals", "SEO Audit", "Speed Optimization", "Analytics", "A/B Testing"]
-    },
-    {
-      icon: "📊",
-      title: "Digital Strategy",
-      description: "Data-driven marketing campaigns and growth strategies designed to reach your target audience and maximize conversions.",
-      features: ["Growth Hacking", "Content Strategy", "PPC Campaigns", "Social Media", "Email Marketing"]
-    },
-    {
-      icon: "⚡",
-      title: "Automation Solutions",
-      description: "Streamline your workflows with custom automation tools, API integrations, and process optimization solutions.",
-      features: ["Workflow Automation", "API Integration", "Custom Tools", "Process Optimization", "Zapier"]
+      icon: "🌐",
+      title: "Web Solutions",
+      description: "High-performance web platforms built with modern frameworks. From landing pages to full-stack applications, we create scalable solutions.",
+      features: ["Next.js", "React", "Scalable Platforms", "SEO Optimized"]
     }
   ];
 
@@ -194,10 +176,7 @@ export default function ServicesSection() {
         <div className="text-center mt-20">
           <div className="inline-flex items-center gap-4">
             <button className="px-8 py-4 bg-gradient-to-r from-teal-600 to-blue-600 text-white font-semibold rounded-full hover:shadow-lg hover:shadow-teal-500/25 transition-all duration-300 hover:scale-105">
-              Start Your Project
-            </button>
-            <button className="px-8 py-4 border border-gray-600 text-gray-300 font-semibold rounded-full hover:border-gray-500 hover:text-white transition-all duration-300">
-              View Portfolio
+              Book a Free 30-Min Consultation
             </button>
           </div>
         </div>

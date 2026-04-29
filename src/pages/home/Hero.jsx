@@ -52,39 +52,33 @@ export default function AIAutomationLanding() {
                 {/* New badge - Updated colors */}
                 <div className="inline-flex items-center gap-2 bg-teal-600/20 backdrop-blur-sm border border-teal-400/30 rounded-full px-4 py-2 mb-8">
                     <span className="bg-teal-500 text-white text-xs font-semibold px-2 py-1 rounded-full">
-                        New
+                        UK-based
                     </span>
-                    <span className="text-white text-sm">Automated Lead Generation</span>
+                    <span className="text-white text-sm">UK-based technology company</span>
                 </div>
 
                 {/* Main heading - Updated gradient */}
                 <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                    Intelligent Automation for{' '}
+                    Helping UK Businesses{' '}
                     <br />
                     <span className="bg-gradient-to-r from-teal-400 via-blue-400 to-green-400 bg-clip-text text-transparent">
-                        Modern Businesses.
+                        Automate Operations & Scale Efficiently
                     </span>
                 </h1>
 
                 {/* Subheading */}
                 <p className="text-gray-300 text-lg md:text-xl mb-12 max-w-2xl mx-auto">
-                    Xtract brings AI automation to your fingertips & streamline tasks.
+                    UK-based delivery with global expertise across AI, web, and automation solutions.
                 </p>
 
                 {/* CTA buttons - Updated colors */}
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                     <Link to="/contact">
                     <button className="cursor-pointer bg-teal-600 hover:bg-teal-700 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-teal-500/25 flex items-center gap-2">
-                        Get in touch
+                        Book a Free 30-Min Consultation
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>
-                    </button>
-                    </Link>
-
-                    <Link to="/services">
-                    <button className="cursor-pointer text-white hover:text-teal-300 font-semibold px-8 py-3 rounded-lg transition-all duration-300 border border-gray-600 hover:border-teal-500 backdrop-blur-sm">
-                        View services
                     </button>
                     </Link>
                 </div>

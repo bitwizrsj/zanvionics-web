@@ -2,6 +2,7 @@ import React from 'react';
 import AIAutomationLanding from "./home/Hero";
 import { Brands } from "./home/Brands";
 import ServicesSection from "./home/Services";
+import WhyUKSection from "./home/WhyUK";
 import TopProjects from "./home/TopProjects";
 import TopBlogs from "./home/TopBlogs";
 import Testimonials from "./home/Testimonials";
@@ -14,6 +15,7 @@ function Home() {
       <AIAutomationLanding />
       {/* <Brands /> */}
       <ServicesSection />
+      <WhyUKSection />
       <TopProjects />
       {/* <TopBlogs /> */}
       <Testimonials />

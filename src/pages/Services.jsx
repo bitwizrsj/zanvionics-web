@@ -39,61 +39,29 @@ const HeroSection = () => {
   const [ref, isInView] = useInView(0.3);
 
   return (
-    <section className="min-h-screen bg-black relative overflow-hidden flex items-center">
-      {/* Animated background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-teal-900/10 via-black to-blue-900/10" />
-      
-      {/* Floating particles */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(25)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1 h-1 bg-teal-400/20 rounded-full animate-float"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 10}s`,
-              animationDuration: `${15 + Math.random() * 10}s`,
-            }}
-          />
-        ))}
-      </div>
+    <section className="min-h-[70vh] bg-black relative flex items-center justify-center overflow-hidden">
+      {/* Spotlight Effect */}
+      <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-gradient-to-b from-indigo-500/20 to-transparent blur-[80px]" />
+      <div className="absolute bottom-0 w-full h-[1px] bg-gradient-to-r from-transparent via-indigo-500/50 to-transparent" />
 
-      <div className="max-w-7xl mx-auto px-6 py-20 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 py-20 relative z-10 w-full text-center">
         <div 
           ref={ref}
-          className={`text-center transition-all duration-1000 ease-out ${
-            isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          className={`max-w-3xl mx-auto transition-all duration-1000 ease-out ${
+            isInView ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
           }`}
         >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-teal-600/20 to-blue-600/20 backdrop-blur-sm border border-teal-500/30 rounded-full px-6 py-3 mb-8">
-            <div className="w-2 h-2 bg-teal-400 rounded-full animate-pulse" />
-            <span className="text-teal-300 text-sm font-medium">Our Services</span>
-            <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" />
+          <div className="inline-block bg-indigo-900/30 border-b border-indigo-400/50 px-6 py-2 mb-8">
+            <span className="text-indigo-300 text-sm font-bold tracking-widest uppercase">Our Specialties</span>
           </div>
           
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-8">
-            <span className="bg-gradient-to-r from-white via-teal-200 to-blue-200 bg-clip-text text-transparent">
-              Comprehensive Technology 
-            </span>
-            <br />
-            <span className="bg-gradient-to-r from-teal-400 to-blue-400 bg-clip-text text-transparent">
-              Solutions
-            </span>
+          <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight text-white tracking-tight">
+            Elegant <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Solutions</span>
           </h1>
           
-          <p className="text-gray-400 text-sm md:text-lg max-w-4xl mx-auto leading-relaxed mb-12">
-            From web development to AI integration, we offer end-to-end solutions to help your business thrive in the digital age.
-</p>
-
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <button className="px-8 py-4 bg-gradient-to-r from-teal-600 to-blue-600 text-white font-semibold rounded-full hover:shadow-lg hover:shadow-teal-500/25 transition-all duration-300 hover:scale-105">
-              See Services
-            </button>
-            <button className="px-8 py-4 border border-gray-600 text-gray-300 font-semibold rounded-full hover:border-gray-500 hover:text-white transition-all duration-300">
-              Technologies
-            </button>
-          </div>
+          <p className="text-gray-300 text-xl max-w-2xl mx-auto font-light leading-relaxed mb-12">
+            From seamless web platforms to intelligent AI integrations, our UK-based team engineers success for forward-thinking enterprises.
+          </p>
         </div>
       </div>
     </section>
@@ -108,84 +76,30 @@ const ServicesSection = () => {
   const services = [
     {
       id: 1,
-      icon: "🌐",
-      title: "Website Development",
-      description: "Custom websites and web applications built with modern frameworks and optimized for performance, SEO, and user experience.",
-      features: ["Responsive Design", "SEO Optimization", "Performance Tuning", "Modern Frameworks"],
+      icon: "⚡",
+      title: "Automation",
+      description: "Streamline your workflows with custom automation tools, API integrations, and process optimization solutions tailored for UK businesses.",
+      features: ["Workflow Automation", "API Integration", "Process Optimization", "Efficiency"],
       gradient: "from-blue-500 to-cyan-500",
       bgGradient: "from-blue-900/20 to-cyan-900/20"
     },
     {
       id: 2,
-      icon: "📱",
-      title: "Mobile App Development",
-      description: "Native and cross-platform mobile applications that deliver exceptional user experiences across iOS and Android platforms.",
-      features: ["Native iOS/Android", "Cross-platform", "UI/UX Design", "App Store Optimization"],
-      gradient: "from-green-500 to-emerald-500",
-      bgGradient: "from-green-900/20 to-emerald-900/20"
-    },
-    {
-      id: 3,
       icon: "🤖",
-      title: "AI Integration",
-      description: "Intelligent automation and AI-powered features to enhance your applications with machine learning capabilities.",
-      features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"],
+      title: "Data / AI",
+      description: "Intelligent automation solutions that handle repetitive tasks, analyze data, and enhance user experiences with cutting-edge AI.",
+      features: ["OpenAI API", "Data Analysis", "Custom Models", "Business Intelligence"],
       gradient: "from-purple-500 to-pink-500",
       bgGradient: "from-purple-900/20 to-pink-900/20"
     },
     {
-      id: 4,
-      icon: "⚡",
-      title: "Performance Optimization",
-      description: "Comprehensive performance audits and optimizations to ensure your applications run at peak efficiency.",
-      features: ["Speed Optimization", "Database Tuning", "Code Refactoring", "Infrastructure Scaling"],
-      gradient: "from-yellow-500 to-orange-500",
-      bgGradient: "from-yellow-900/20 to-orange-900/20"
-    },
-    {
-      id: 5,
-      icon: "📊",
-      title: "Digital Strategies",
-      description: "Data-driven digital strategies and consulting to help your business navigate the digital landscape effectively.",
-      features: ["Market Analysis", "Digital Transformation", "Growth Strategy", "ROI Optimization"],
-      gradient: "from-indigo-500 to-purple-500",
-      bgGradient: "from-indigo-900/20 to-purple-900/20"
-    },
-    {
-      id: 6,
-      icon: "🔄",
-      title: "Automation Solutions",
-      description: "Custom automation workflows and tools to streamline your business processes and increase operational efficiency.",
-      features: ["Workflow Automation", "API Integration", "Process Optimization", "Custom Tools"],
-      gradient: "from-teal-500 to-blue-500",
-      bgGradient: "from-teal-900/20 to-blue-900/20"
-    },
-    {
-      id: 7,
-      icon: "🔒",
-      title: "Cybersecurity",
-      description: "Comprehensive security solutions to protect your digital assets from threats and ensure compliance with industry standards.",
-      features: ["Security Audits", "Penetration Testing", "Compliance Management", "Threat Monitoring"],
-      gradient: "from-red-500 to-pink-500",
-      bgGradient: "from-red-900/20 to-pink-900/20"
-    },
-    {
-      id: 8,
-      icon: "📈",
-      title: "Data Analytics",
-      description: "Advanced analytics and business intelligence solutions to turn your data into actionable insights and competitive advantages.",
-      features: ["Business Intelligence", "Data Visualization", "Predictive Modeling", "Real-time Dashboards"],
-      gradient: "from-cyan-500 to-blue-500",
-      bgGradient: "from-cyan-900/20 to-blue-900/20"
-    },
-    {
-      id: 9,
-      icon: "☁️",
-      title: "Cloud Services",
-      description: "Scalable cloud infrastructure and migration services to ensure your applications are reliable, secure, and cost-effective.",
-      features: ["Cloud Migration", "Infrastructure Management", "Scalability Planning", "Cost Optimization"],
-      gradient: "from-slate-500 to-gray-500",
-      bgGradient: "from-slate-900/20 to-gray-900/20"
+      id: 3,
+      icon: "🌐",
+      title: "Web Solutions",
+      description: "High-performance web platforms built with modern frameworks. From landing pages to full-stack applications, we create scalable solutions.",
+      features: ["Next.js", "React", "Scalable Platforms", "SEO Optimized"],
+      gradient: "from-teal-500 to-emerald-500",
+      bgGradient: "from-teal-900/20 to-emerald-900/20"
     }
   ];
 
@@ -503,10 +417,7 @@ const CTASection = () => {
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <button className="px-10 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-semibold rounded-full hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 hover:scale-105">
-              Start Your Project
-            </button>
-            <button className="px-10 py-4 border border-gray-600 text-gray-300 font-semibold rounded-full hover:border-gray-500 hover:text-white transition-all duration-300">
-              Schedule Consultation
+              Book a Free 30-Min Consultation
             </button>
           </div>
         </div>

@@ -27,62 +27,29 @@ const HeroSection = () => {
   const [ref, isInView] = useInView(0.3);
 
   return (
-    <section className="min-h-screen bg-black relative overflow-hidden flex items-center">
-      {/* Animated background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-teal-900/10 via-black to-blue-900/10" />
-      
-      {/* Floating particles */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(25)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1 h-1 bg-teal-400/20 rounded-full animate-float"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 10}s`,
-              animationDuration: `${15 + Math.random() * 10}s`,
-            }}
-          />
-        ))}
-      </div>
+    <section className="min-h-[70vh] bg-black relative flex items-center justify-center overflow-hidden">
+      {/* Spotlight Effect */}
+      <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-gradient-to-b from-teal-500/20 to-transparent blur-[80px]" />
+      <div className="absolute bottom-0 w-full h-[1px] bg-gradient-to-r from-transparent via-teal-500/50 to-transparent" />
 
-      <div className="max-w-7xl mx-auto px-6 py-20 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 py-20 relative z-10 w-full text-center">
         <div 
           ref={ref}
-          className={`text-center transition-all duration-1000 ease-out ${
-            isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          className={`max-w-4xl mx-auto transition-all duration-1000 ease-out ${
+            isInView ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
           }`}
         >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-teal-600/20 to-blue-600/20 backdrop-blur-sm border border-teal-500/30 rounded-full px-6 py-3 mb-8">
-            <div className="w-2 h-2 bg-teal-400 rounded-full animate-pulse" />
-            <span className="text-teal-300 text-sm font-medium">About Our Company</span>
-            <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" />
+          <div className="inline-block bg-teal-900/30 border-b border-teal-400/50 px-6 py-2 mb-8">
+            <span className="text-teal-300 text-sm font-bold tracking-widest uppercase">Who We Are</span>
           </div>
           
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-8">
-            <span className="bg-gradient-to-r from-white via-teal-200 to-blue-200 bg-clip-text text-transparent">
-              We Build Digital
-            </span>
-            <br />
-            <span className="bg-gradient-to-r from-teal-400 to-blue-400 bg-clip-text text-transparent">
-              Experiences
-            </span>
+          <h1 className="text-5xl md:text-7xl font-bold mb-8 text-white tracking-tight">
+            Digital <span className="bg-gradient-to-r from-teal-400 to-blue-400 bg-clip-text text-transparent">Architects</span>
           </h1>
           
-          <p className="text-gray-400 text-sm md:text-lg max-w-4xl mx-auto leading-relaxed mb-12">
-            We're a team of passionate creators, developers, and strategists dedicated to transforming 
-            ideas into powerful digital solutions that drive real business results.
+          <p className="text-gray-300 text-xl max-w-2xl mx-auto font-light leading-relaxed mb-12">
+            We're a UK-based collective of passionate creators, engineers, and strategists. We don't just build software; we engineer ecosystems that empower UK businesses to thrive.
           </p>
-
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <button className="px-8 py-4 bg-gradient-to-r from-teal-600 to-blue-600 text-white font-semibold rounded-full hover:shadow-lg hover:shadow-teal-500/25 transition-all duration-300 hover:scale-105">
-              Our Story
-            </button>
-            <button className="px-8 py-4 border border-gray-600 text-gray-300 font-semibold rounded-full hover:border-gray-500 hover:text-white transition-all duration-300">
-              Meet the Team
-            </button>
-          </div>
         </div>
       </div>
     </section>
@@ -381,10 +348,7 @@ const CTASection = () => {
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <button className="px-10 py-4 bg-gradient-to-r from-teal-600 to-blue-600 text-white font-semibold rounded-full hover:shadow-lg hover:shadow-teal-500/25 transition-all duration-300 hover:scale-105">
-              Start Your Project
-            </button>
-            <button className="px-10 py-4 border border-gray-600 text-gray-300 font-semibold rounded-full hover:border-gray-500 hover:text-white transition-all duration-300">
-              Schedule Consultation
+              Book a Free 30-Min Consultation
             </button>
           </div>
         </div>

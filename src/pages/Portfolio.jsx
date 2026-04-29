@@ -6,23 +6,26 @@ const PortfolioHero = () => {
   const [ref, isInView] = useInView(0.2);
 
   return (
-    <section className="min-h-[80vh] bg-black relative flex items-center">
-      <div className="max-w-7xl mx-auto px-6 py-20">
+    <section className="min-h-[70vh] bg-black relative flex items-center justify-center overflow-hidden">
+      {/* Spotlight Effect */}
+      <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-gradient-to-b from-blue-500/20 to-transparent blur-[80px]" />
+      <div className="absolute bottom-0 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
+
+      <div className="max-w-7xl mx-auto px-6 py-20 relative z-10 w-full text-center">
         <motion.div
           ref={ref}
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.5 }}
-          className="text-center"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          <div className="inline-block bg-purple-600/20 backdrop-blur-sm border border-purple-500/30 rounded-full px-4 py-2 mb-6">
-            <span className="text-purple-300 text-sm font-medium">Our Work</span>
+          <div className="inline-block bg-blue-900/30 border-b border-blue-400/50 px-6 py-2 mb-8">
+            <span className="text-blue-300 text-sm font-bold tracking-widest uppercase">Success Stories</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Featured Projects
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 tracking-tight">
+            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Case Studies</span>
           </h1>
-          <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-            Explore our portfolio of successful projects and innovative solutions that have helped businesses transform and grow.
+          <p className="text-gray-300 text-xl max-w-2xl mx-auto font-light leading-relaxed">
+            Real-world impact. Explore how we've helped UK businesses scale, automate, and dominate their industries through precision engineering.
           </p>
         </motion.div>
       </div>
@@ -72,47 +75,23 @@ const ProjectCard = ({ project, index }) => {
 const Projects = () => {
   const projects = [
     {
-      title: "E-commerce Platform",
-      description: "A full-featured online marketplace with AI-powered recommendations.",
-      image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg",
-      technologies: ["React", "Node.js", "MongoDB", "AWS"]
+      title: "Built automation dashboard",
+      description: "Saved 15+ hours/week by automating repetitive patient data entry and administrative reporting workflows for a UK-based clinic.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
+      technologies: ["React", "Node.js", "Automation API"]
     },
     {
-      title: "Healthcare App",
-      description: "Mobile application for patient management and telemedicine.",
-      image: "https://images.pexels.com/photos/3846035/pexels-photo-3846035.jpeg",
-      technologies: ["React Native", "Firebase", "WebRTC"]
-    },
-    {
-      title: "AI Analytics Dashboard",
-      description: "Real-time data visualization and predictive analytics platform.",
-      image: "https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg",
-      technologies: ["Vue.js", "Python", "TensorFlow", "D3.js"]
-    },
-    {
-      title: "Smart Home System",
-      description: "IoT-based home automation system with voice control.",
-      image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg",
-      technologies: ["IoT", "React", "Node.js", "MongoDB"]
-    },
-    {
-      title: "Financial Platform",
-      description: "Secure banking and investment management system.",
-      image: "https://images.pexels.com/photos/730547/pexels-photo-730547.jpeg",
-      technologies: ["Angular", "Java", "PostgreSQL", "Docker"]
-    },
-    {
-      title: "Education Platform",
-      description: "Online learning management system with interactive features.",
-      image: "https://images.pexels.com/photos/5905700/pexels-photo-5905700.jpeg",
-      technologies: ["Next.js", "GraphQL", "MongoDB", "AWS"]
+      title: "Developed website for startup",
+      description: "Built a fully responsive, modern website optimized for conversions, resulting in a 2x increase in qualified leads for a local UK business.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
+      technologies: ["Next.js", "Tailwind CSS", "SEO"]
     }
   ];
 
   return (
     <section className="py-20 bg-black">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {projects.map((project, index) => (
             <ProjectCard key={index} project={project} index={index} />
           ))}

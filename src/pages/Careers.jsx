@@ -6,61 +6,29 @@ const CareersHero = () => {
   const [ref, isInView] = useInView(0.2);
 
   return (
-    <section className="min-h-screen bg-black relative overflow-hidden flex items-center">
-      {/* Animated background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-teal-900/10 via-black to-blue-900/10" />
-      
-      {/* Floating particles */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(25)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1 h-1 bg-teal-400/20 rounded-full animate-float"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 10}s`,
-              animationDuration: `${15 + Math.random() * 10}s`,
-            }}
-          />
-        ))}
-      </div>
+    <section className="min-h-[70vh] bg-black relative flex items-center justify-center overflow-hidden">
+      {/* Spotlight Effect */}
+      <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-gradient-to-b from-emerald-500/20 to-transparent blur-[80px]" />
+      <div className="absolute bottom-0 w-full h-[1px] bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
 
-      <div className="max-w-7xl mx-auto px-6 py-20 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 py-20 relative z-10 w-full text-center">
         <div 
           ref={ref}
-          className={`text-center transition-all duration-1000 ease-out ${
-            isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          className={`max-w-4xl mx-auto transition-all duration-1000 ease-out ${
+            isInView ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
           }`}
         >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-teal-600/20 to-blue-600/20 backdrop-blur-sm border border-teal-500/30 rounded-full px-6 py-3 mb-8">
-            <div className="w-2 h-2 bg-teal-400 rounded-full animate-pulse" />
-            <span className="text-teal-300 text-sm font-medium">Join Our Team</span>
-            <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" />
+          <div className="inline-block bg-emerald-900/30 border-b border-emerald-400/50 px-6 py-2 mb-8">
+            <span className="text-emerald-300 text-sm font-bold tracking-widest uppercase">Hiring Now</span>
           </div>
           
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-8">
-            <span className="bg-gradient-to-r from-white via-teal-200 to-blue-200 bg-clip-text text-transparent">
-              Build the Future 
-            </span>
-            <br />
-            <span className="bg-gradient-to-r from-teal-400 to-blue-400 bg-clip-text text-transparent">
-              With Us
-            </span>
+          <h1 className="text-5xl md:text-7xl font-bold mb-8 text-white tracking-tight">
+            Build the <span className="bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent">Impossible</span>
           </h1>
           
-          <p className="text-gray-400 text-sm md:text-lg max-w-4xl mx-auto leading-relaxed mb-12">
-            Join our team of innovators and help shape the future of technology. We're always looking for talented individuals to join our mission.
-</p>
-
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <button className="px-8 py-4 bg-gradient-to-r from-teal-600 to-blue-600 text-white font-semibold rounded-full hover:shadow-lg hover:shadow-teal-500/25 transition-all duration-300 hover:scale-105">
-              Open Positions
-            </button>
-            <button className="px-8 py-4 border border-gray-600 text-gray-300 font-semibold rounded-full hover:border-gray-500 hover:text-white transition-all duration-300">
-              Life at Zanvionics
-            </button>
-          </div>
+          <p className="text-gray-300 text-xl max-w-2xl mx-auto font-light leading-relaxed mb-12">
+            We are looking for exceptional talent to join our UK-based team. Help us engineer the future of business automation and digital experiences.
+          </p>
         </div>
       </div>
     </section>
@@ -168,7 +136,7 @@ const OpenPositions = () => {
     {
       title: "UX/UI Designer",
       department: "Design",
-      location: "San Francisco, CA",
+      location: "London, UK",
       type: "Full-time",
       description: "Join our design team to create beautiful and intuitive user experiences."
     },

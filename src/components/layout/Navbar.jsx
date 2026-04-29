@@ -66,7 +66,7 @@ const Navbar = () => {
                             to="/contact"
                             className="hidden md:inline-block bg-[#00B4A8] hover:bg-[#007399] text-white font-semibold px-6 py-2 rounded-full transition-all duration-300 transform hover:scale-105"
                         >
-                            Get Started
+                            Book a Free 30-Min Consultation
                         </Link>
 
                         {/* Mobile Menu Toggle */}
@@ -97,7 +97,7 @@ const Navbar = () => {
                             onClick={() => setIsMobileMenuOpen(false)}
                             className="bg-[#00587A] hover:bg-[#007399] text-white font-semibold px-6 py-2 rounded-full text-center"
                         >
-                            Get Started
+                            Book a Free 30-Min Consultation
                         </Link>
                     </div>
                 )}
