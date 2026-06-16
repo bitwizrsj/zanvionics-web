@@ -84,7 +84,7 @@ const Footer = () => {
 
         {/* Bottom Line */}
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-500">
-          <p>© {new Date().getFullYear()} <span className="text-white">zanvionics</span>. All rights reserved.</p>
+          <p>Zanvionics Technologies Ltd | Registered in England & Wales | Company No. 16495400 | © 2025 All rights reserved</p>
         </div>
       </div>
     </footer>
